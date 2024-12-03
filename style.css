@@ -4,6 +4,12 @@
     box-sizing: border-box;
 }
 
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+
 .main{
     background-image: url("Security.jpg");
     min-height: 100vh;
@@ -100,7 +106,7 @@
 
 .card{
     max-width: 400px;
-    height: 300px;
+    min-height: 300px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -214,8 +220,9 @@
 }
 .realServices .card img{
     width: 300px;
-    height: 250px;
-    object-fit: cover;
+    height: 150px;
+    align-self: center;
+    object-fit: fill;
     border-radius: 15px 15px 0px 0px;
 }
 .realServices .card p{
@@ -267,11 +274,15 @@
 }
 .testimonial .t-card img{
     width: 40px;
+    height: 40px;
+    object-fit: contain;
     border-radius: 40px;
 }
 .testimonial .t-card h3{
     font-size: 15px;
     font-weight: 600;
+    letter-spacing: 3px;
+    text-transform: uppercase;
 }
 .testimonial .t-card .users{
     display: flex;
